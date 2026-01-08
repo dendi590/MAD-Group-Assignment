@@ -52,8 +52,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.google.code.gson:gson:2.10.1")
 
+
     // ✅ ADD Nabila’s required dependencies for DataStore, LiveData, ViewModel
     implementation("androidx.datastore:datastore-preferences:1.1.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 }
+
