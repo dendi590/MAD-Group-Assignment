@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "my.student.edu.utem.taskmasterpro"
-    compileSdk = 36
+    namespace = "my.student.edu.utem.taskmasterpro" // ← Keep your namespace
+    compileSdk = 36 // ← Keep your higher SDK
 
     defaultConfig {
         applicationId = "my.student.edu.utem.taskmasterpro"
-        minSdk = 28
-        targetSdk = 36
+        minSdk = 28 // ← Keep your minSdk (higher = safer)
+        targetSdk = 36 // ← Keep your targetSdk
         versionCode = 1
         versionName = "1.0"
 
@@ -51,4 +51,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.google.code.gson:gson:2.10.1")
+
+    // ✅ ADD Nabila’s required dependencies for DataStore, LiveData, ViewModel
+    implementation("androidx.datastore:datastore-preferences:1.1.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 }

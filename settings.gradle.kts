@@ -20,4 +20,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "TaskMasterPro"
+//rootProject.name = "SettingsActivity"
 include(":app")

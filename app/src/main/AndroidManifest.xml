@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 
+    FROM nabila_branch (legacy storage - not needed for SDK 36):
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    -->
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -10,16 +20,41 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TaskMasterPro">
+        android:theme="@style/Theme.TaskMasterPro"
+        tools:targetApi="31">
+
+        <!-- Main Activity (kept from your branch) -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- 
+        FROM nabila_branch (SettingsActivity kept but MainActivity changed):
+        <activity
+            android:name=".settingsactivity.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".settingsactivity.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+
+        <!-- Keep SettingsActivity if it exists -->
+        <activity
+            android:name=".settingsactivity.SettingsActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
