@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.TaskMasterPro" parent="Base.Theme.TaskMasterPro" />
+<<<<<<< HEAD
+=======
+    
+    <!-- Legacy theme name for compatibility -->
+    <style name="Theme.SettingsActivity" parent="Base.Theme.TaskMasterPro" />
+>>>>>>> nabila_branch
 </resources>
